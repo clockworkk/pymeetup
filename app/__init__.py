@@ -1,8 +1,9 @@
 from flask import Flask
-frpm flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.sqlalchemy import SQLAlchemy
+import config
 
 app = Flask(__name__)
-app.config.from_object('config')
-db = SQLAlchemy(pymeetup)
+#app.config.from_file('config.py')
+db = SQLAlchemy(app)
 
 from app import routes, models
