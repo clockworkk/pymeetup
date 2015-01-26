@@ -1,6 +1,6 @@
 from app import db
 import datetime
-import date
+###import date
 import time
 
 meetups = db.Table('meetups', 
