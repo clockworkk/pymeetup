@@ -1,5 +1,11 @@
 from flask import Flask
-from flask.ext.sqlalchemy import SQLAlchemy
+### 2015-01-25 -- blingall -- Flask changed how they do shit
+###from flask.ext.sqlalchemy import SQLAlchemy
+
+## You must have Flask-SQLAlchemy installed as well
+#- use pip
+from flask_sqlalchemy import SQLAlchemy
+
 import config
 
 app = Flask(__name__)
