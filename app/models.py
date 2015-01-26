@@ -14,7 +14,8 @@ class User(db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     first_name = db.Column(db.String(64), index=True)
     last_name = db.Column(db.String(64), index=True)
-    events = db.relationship('Meetup', secondary=tags, backref=db.backref('users', lazy='dynamic'))
+    ### There is no table for tags so I am going to comment this out.
+    ###events = db.relationship('Meetup', secondary=tags, backref=db.backref('users', lazy='dynamic'))
 
     def __init__(self, username, email, first_name, last_name):
         self.username = username
