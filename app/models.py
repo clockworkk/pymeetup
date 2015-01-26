@@ -30,7 +30,7 @@ class Meetup(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     event_name = db.Column(db.String(120), index=True)
     creator = db.Column(db.String(64), index=True)
-    event_date = db.Column(db.DateTime), index=True)
+    event_date = db.Column(db.DateTime(), index=True)
     time = db.Column(db.String(8), index=True)
     location = db.Column(db.String(120), index=True)
 
