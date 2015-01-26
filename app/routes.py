@@ -23,7 +23,7 @@ def delete_meetup():
     pass
 
 @app.route('/meetupnow/api/user/create', methods=['POST'])
-def delete_meetup():
+def create_new_user():
     pass
 
 
