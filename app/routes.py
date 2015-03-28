@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -25,5 +25,16 @@ def delete_meetup():
 @app.route('/meetupnow/api/user/create', methods=['POST'])
 def create_new_user():
     pass
+
+
+@app.route('/meetupnow/api/user/login', methods=['POST'])
+def login():
+	if request.method == 'POST':
+		data = reqeust.data
+		results = parse.parseLogin(data)
+
+		print results
+
+
 
 
